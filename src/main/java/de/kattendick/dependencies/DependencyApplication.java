@@ -1,4 +1,4 @@
-package de.kattendick.tf;
+package de.kattendick.dependencies;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

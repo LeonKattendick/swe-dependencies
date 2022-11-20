@@ -1,6 +1,6 @@
-package de.kattendick.tf.persistence;
+package de.kattendick.dependencies.persistence;
 
-import de.kattendick.tf.persistence.model.CustomerEntity;
+import de.kattendick.dependencies.persistence.model.CustomerEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

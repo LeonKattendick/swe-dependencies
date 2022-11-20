@@ -1,8 +1,8 @@
-package de.kattendick.tf.controller;
+package de.kattendick.dependencies.controller;
 
-import de.kattendick.tf.persistence.model.response.CustomerResponse;
-import de.kattendick.tf.persistence.model.response.CustomerWithBalanceResponse;
-import de.kattendick.tf.service.CustomerService;
+import de.kattendick.dependencies.persistence.model.response.CustomerResponse;
+import de.kattendick.dependencies.persistence.model.response.CustomerWithBalanceResponse;
+import de.kattendick.dependencies.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

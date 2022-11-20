@@ -1,4 +1,4 @@
-package de.kattendick.tf.persistence.model;
+package de.kattendick.dependencies.persistence.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

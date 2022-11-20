@@ -1,4 +1,4 @@
-package de.kattendick.tf.persistence.model.response;
+package de.kattendick.dependencies.persistence.model.response;
 
 import lombok.Builder;
 import lombok.Data;
