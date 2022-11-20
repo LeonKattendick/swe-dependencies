@@ -19,6 +19,8 @@ public class CustomerEntity {
     @Id
     private Long id;
 
+    private String name;
+
     private String address;
 
     private Date dateOfBirth;

@@ -20,7 +20,7 @@ public class ProductEntity {
 
     private String name;
 
-    private Long balance;
+    private Integer balance;
 
     private Long productCode;
 
