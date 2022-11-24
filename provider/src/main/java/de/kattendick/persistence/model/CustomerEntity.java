@@ -1,4 +1,4 @@
-package de.kattendick.dependencies.persistence.model;
+package de.kattendick.persistence.model;
 
 import lombok.*;
 

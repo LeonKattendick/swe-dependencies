@@ -1,6 +1,6 @@
-package de.kattendick.dependencies.persistence;
+package de.kattendick.persistence;
 
-import de.kattendick.dependencies.persistence.model.ProductEntity;
+import de.kattendick.persistence.model.ProductEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

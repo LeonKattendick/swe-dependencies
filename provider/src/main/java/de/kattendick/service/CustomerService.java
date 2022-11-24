@@ -1,8 +1,8 @@
-package de.kattendick.dependencies.service;
+package de.kattendick.service;
 
-import de.kattendick.dependencies.persistence.CustomerRepository;
-import de.kattendick.dependencies.persistence.model.CustomerEntity;
-import de.kattendick.dependencies.persistence.model.ProductEntity;
+import de.kattendick.persistence.CustomerRepository;
+import de.kattendick.persistence.model.CustomerEntity;
+import de.kattendick.persistence.model.ProductEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

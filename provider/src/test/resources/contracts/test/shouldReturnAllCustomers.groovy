@@ -1,4 +1,4 @@
-package contracts
+package contracts.test
 
 import org.springframework.cloud.contract.spec.Contract
 
@@ -13,6 +13,5 @@ Contract.make {
     }
     response {
         status OK()
-        body("test")
     }
 }
