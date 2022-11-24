@@ -1,6 +1,5 @@
 package de.kattendick.provider.service;
 
-import de.kattendick.provider.persistence.CustomerRepository;
 import de.kattendick.provider.persistence.model.CustomerEntity;
 import de.kattendick.provider.persistence.model.ProductEntity;
 import lombok.AllArgsConstructor;
@@ -15,13 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CustomerService {
 
-    private CustomerRepository customerRepository;
-
     public List<CustomerEntity> getListOfAllCustomers() {
-        return customerRepository.findAll();
-    }
-
-    public void addTestData() {
 
         ProductEntity product1 = ProductEntity.builder()
                 .name("Produkt 1")
@@ -62,12 +55,6 @@ public class CustomerService {
                 .productEntities(Collections.singletonList(product3))
                 .build();
 
-        product1.setCustomer(customer1);
-        product2.setCustomer(customer1);
-        product3.setCustomer(customer2);
-
-        customerRepository.save(customer1);
-        customerRepository.save(customer2);
-
+        return Arrays.asList(customer1, customer2);
     }
 }

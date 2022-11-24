@@ -1,19 +1,16 @@
 package de.kattendick.provider.persistence.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import lombok.*;
-
-import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
 public class ProductEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -23,10 +20,5 @@ public class ProductEntity {
     private Integer productCode;
 
     private Double interestRate;
-
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    private CustomerEntity customer;
 
 }
