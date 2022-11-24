@@ -21,10 +21,6 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    public int calculateAggregatedBalanceForCustomer(CustomerEntity customer) {
-        return customer.getProductEntities().stream().mapToInt(ProductEntity::getBalance).sum();
-    }
-
     public void addTestData() {
 
         ProductEntity product1 = ProductEntity.builder()

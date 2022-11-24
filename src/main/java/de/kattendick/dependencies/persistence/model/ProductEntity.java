@@ -1,9 +1,7 @@
 package de.kattendick.dependencies.persistence.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -26,6 +24,7 @@ public class ProductEntity {
 
     private Double interestRate;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private CustomerEntity customer;
