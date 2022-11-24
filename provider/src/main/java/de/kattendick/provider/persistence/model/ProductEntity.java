@@ -1,4 +1,4 @@
-package de.kattendick.persistence.model;
+package de.kattendick.provider.persistence.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;

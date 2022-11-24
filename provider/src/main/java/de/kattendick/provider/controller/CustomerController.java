@@ -1,7 +1,7 @@
-package de.kattendick.controller;
+package de.kattendick.provider.controller;
 
-import de.kattendick.persistence.model.CustomerEntity;
-import de.kattendick.service.CustomerService;
+import de.kattendick.provider.persistence.model.CustomerEntity;
+import de.kattendick.provider.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

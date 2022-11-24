@@ -1,7 +1,7 @@
-package de.kattendick.service;
+package de.kattendick.provider.service;
 
-import de.kattendick.persistence.model.CustomerEntity;
-import de.kattendick.persistence.model.ProductEntity;
+import de.kattendick.provider.persistence.model.CustomerEntity;
+import de.kattendick.provider.persistence.model.ProductEntity;
 
 import java.sql.Date;
 import java.util.Arrays;
