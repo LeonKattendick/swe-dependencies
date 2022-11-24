@@ -18,7 +18,7 @@ public class CustomerEntity {
 
     private String address;
 
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     private String email;
 

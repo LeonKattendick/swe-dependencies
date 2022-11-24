@@ -17,6 +17,7 @@ public class CustomerService {
     public List<CustomerEntity> getListOfAllCustomers() {
 
         ProductEntity product1 = ProductEntity.builder()
+                .id(1L)
                 .name("Produkt 1")
                 .balance(1200)
                 .productCode(123)
@@ -24,6 +25,7 @@ public class CustomerService {
                 .build();
 
         ProductEntity product2 = ProductEntity.builder()
+                .id(2L)
                 .name("Produkt 2")
                 .balance(300)
                 .productCode(234)
@@ -31,6 +33,7 @@ public class CustomerService {
                 .build();
 
         ProductEntity product3 = ProductEntity.builder()
+                .id(3L)
                 .name("Produkt 3")
                 .balance(530)
                 .productCode(345)
@@ -38,6 +41,7 @@ public class CustomerService {
                 .build();
 
         CustomerEntity customer1 = CustomerEntity.builder()
+                .id(1L)
                 .name("Max")
                 .address("Musterstraße 1")
                 .dateOfBirth(new Date(System.currentTimeMillis()))
@@ -47,6 +51,7 @@ public class CustomerService {
                 .build();
 
         CustomerEntity customer2 = CustomerEntity.builder()
+                .id(2L)
                 .name("Peter")
                 .address("Musterstraße 2")
                 .dateOfBirth(new Date(System.currentTimeMillis()))
