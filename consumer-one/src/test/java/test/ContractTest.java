@@ -14,6 +14,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
+import java.util.List;
 
 @SpringBootTest(classes = ConsumerOneApplication.class)
 @AutoConfigureStubRunner(
@@ -26,11 +27,7 @@ public class ContractTest {
     public void confirmCustomerList() {
         // given:
         MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-        converter.setSupportedMediaTypes(
-                Arrays.asList(
-                        MediaType.APPLICATION_JSON,
-                        new MediaType("application", "*+json"),
-                        MediaType.APPLICATION_OCTET_STREAM));
+        converter.setSupportedMediaTypes(List.of(MediaType.APPLICATION_OCTET_STREAM));
 
         RestTemplate restTemplate = new RestTemplateBuilder()
                 .defaultHeader("Content-Type", "application/json")
@@ -43,7 +40,9 @@ public class ContractTest {
 
         // then:
         for (CustomerEntity customerEntity : customer) {
-            BDDAssertions.then(customerEntity.getId()).isEqualTo(1);
+            BDDAssertions.then(customerEntity).hasFieldOrProperty("name");
+            BDDAssertions.then(customerEntity).hasFieldOrProperty("email");
+            BDDAssertions.then(customerEntity).hasFieldOrProperty("status");
         }
     }
 }

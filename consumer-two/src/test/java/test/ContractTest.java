@@ -2,6 +2,7 @@ package test;
 
 import de.kattendick.ct.ConsumerTwoApplication;
 import de.kattendick.ct.model.CustomerEntity;
+import de.kattendick.ct.model.ProductEntity;
 import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +14,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
+import java.util.List;
 
 @SpringBootTest(classes = ConsumerTwoApplication.class)
 @AutoConfigureStubRunner(
@@ -25,11 +27,7 @@ public class ContractTest {
     public void confirmCustomerList() {
         // given:
         MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-        converter.setSupportedMediaTypes(
-                Arrays.asList(
-                        MediaType.APPLICATION_JSON,
-                        new MediaType("application", "*+json"),
-                        MediaType.APPLICATION_OCTET_STREAM));
+        converter.setSupportedMediaTypes(List.of(MediaType.APPLICATION_OCTET_STREAM));
 
         RestTemplate restTemplate = new RestTemplateBuilder()
                 .defaultHeader("Content-Type", "application/json")
@@ -42,7 +40,12 @@ public class ContractTest {
 
         // then:
         for (CustomerEntity customerEntity : customer) {
-            BDDAssertions.then(customerEntity.getId()).isEqualTo(1);
+            BDDAssertions.then(customerEntity).hasFieldOrProperty("name");
+            BDDAssertions.then(customerEntity).hasFieldOrProperty("productEntities");
+
+            for (ProductEntity productEntity : customerEntity.getProductEntities()) {
+                BDDAssertions.then(productEntity).hasFieldOrProperty("balance");
+            }
         }
     }
 }
