@@ -11,10 +11,10 @@ In `provider/src/test/java/test/resources/contracts/tests/shouldReturnAllCustome
 Consumes the API and outputs the name, email and status of all customers on `http://localhost:8081/one`.
 
 ### Contract testing
-In `consumer-one/src/test/java/test/ContractTest.java` you will find the consumer-one, which opens the stubbed endpoint and checks for the needed fields.
+In `consumer-one/src/test/java/test/ContractTest.java` you will find the consumer-one test, which opens the stubbed endpoint and checks for the needed fields.
 
 # Consumer 2
 Consumes the API and outputs the name and aggregated balance of all customers and their products on `http://localhost:8082/two`.
 
 ### Contract testing
-In `consumer-two/src/test/java/test/ContractTest.java` you will find the consumer-one, which opens the stubbed endpoint and checks for the needed fields.
+In `consumer-two/src/test/java/test/ContractTest.java` you will find the consumer-two test, which opens the stubbed endpoint and checks for the needed fields.
